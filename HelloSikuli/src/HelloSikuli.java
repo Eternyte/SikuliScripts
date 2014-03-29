@@ -1,4 +1,5 @@
-/* HelloSikuli.java
+/**
+ * HelloSikuli.java
  * description: Hello World for Sikuli.
  * 				Basically, code from http://www.paulfrymire.com/2011/08/30
  * 
