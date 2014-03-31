@@ -148,10 +148,29 @@ public class ConvertImage {
 		return listOfFiles;
 	} // getListOfFiles
 	
+	/**
+	 * attemptClick attempts to click the pattern given and prints the given
+	 * feedback if the click was successful. Otherwise, it returns an error.
+	 * This function allows clicking only once.
+	 * @param pattern	the pattern to click
+	 * @param feedback	the string to print if the click was successful
+	 * @return	true	if the click was successful
+	 * 			false	if the click failed
+	 */
 	private static boolean attemptClick(Pattern pattern, String feedback) {
 		return attemptClick(pattern, feedback, 1);
 	}
 	
+	/**
+	 * attemptClick attempts to click the pattern given and prints the given
+	 * feedback if the click was successful. Otherwise, it returns an error.
+	 * This function allows clicking once or twice.
+	 * @param pattern	the pattern to click
+	 * @param feedback	the string to print if the click was successful
+	 * @param count		the number of times to click
+	 * @return	true	if the click was successful
+	 * 			false	if the click failed
+	 */
 	private static boolean attemptClick
 							(Pattern pattern, String feedback, int count) {
 		// The snapshot of the current desktop screen.
@@ -179,6 +198,14 @@ public class ConvertImage {
 		}
 	} // attemptClick
 	
+	/**
+	 * attemptDrag attempts to drag the pattern given and prints the given
+	 * feedback if the drag was successful. Otherwise, it returns an error.
+	 * @param pNextTo	the pattern that is to the left of the pattern to drag	
+	 * @param pDrop		the pattern to drag
+	 * @return	true	if the drag was successful
+	 * 			false	if the drag failed
+	 */
 	private static boolean attemptDrag(Pattern pNextTo, Pattern pDrop) {
 		// The snapshot of the current desktop screen.
 		Screen screen = new Screen();
